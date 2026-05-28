@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>严明宇 | 视频作品</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #18212b;
+      background: #f4f7fa;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .wrap {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 52px;
+    }
+    header {
+      margin-bottom: 22px;
+      padding: 22px 0;
+      border-bottom: 1px solid #dce5ee;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #1261a6;
+      font-size: 14px;
+      font-weight: 800;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 44px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    .intro {
+      max-width: 720px;
+      margin: 12px 0 0;
+      color: #5d6f80;
+      font-size: 15px;
+    }
+    .main-video, .card {
+      background: #fff;
+      border: 1px solid #dce5ee;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .main-video {
+      margin-bottom: 28px;
+      box-shadow: 0 20px 54px rgba(20, 35, 50, .14);
+    }
+    video {
+      display: block;
+      width: 100%;
+      background: #05070a;
+      object-fit: contain;
+    }
+    .main-video video {
+      min-height: 420px;
+      max-height: 72vh;
+    }
+    .caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 16px;
+      color: #dce8f5;
+      background: #0b1118;
+      border-top: 1px solid #1b2b3c;
+      font-size: 14px;
+    }
+    .caption span:last-child { color: #92abc5; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card video { aspect-ratio: 16 / 9; }
+    .card-body { padding: 14px 16px 16px; }
+    .card h2 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    .card p {
+      margin: 0;
+      color: #607080;
+      font-size: 13px;
+    }
+    footer {
+      margin-top: 30px;
+      color: #607080;
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 20px, 1080px); padding-top: 18px; }
+      .grid { grid-template-columns: 1fr; }
+      .main-video video { min-height: 240px; }
+      .caption, .caption span { display: block; }
+      .caption span + span { margin-top: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <p class="eyebrow">Video Showcase</p>
+      <h1>严明宇的视频作品</h1>
+      <p class="intro">这里集中展示我的视频作品，支持在线播放、暂停和拖动进度条。建议优先观看主推作品《与AI共生》。</p>
+    </header>
+
+    <section class="main-video" aria-label="主推视频">
+      <video src="https://github.com/yanmingyu322-ship-it/yanmingyu-video-showcase/releases/download/videos-v1/ai-symbiosis.mp4" controls preload="metadata"></video>
+      <div class="caption">
+        <span>主推作品：严明宇《与AI共生》</span>
+        <span>AIGC / 视频表达</span>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="更多视频">
+      <article class="card">
+        <video src="https://github.com/yanmingyu322-ship-it/yanmingyu-video-showcase/releases/download/videos-v1/work-1.mp4" controls preload="metadata"></video>
+        <div class="card-body">
+          <h2>视频作品 01</h2>
+          <p>用于展示视频内容表达、画面组织和剪辑完成度。</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <video src="https://github.com/yanmingyu322-ship-it/yanmingyu-video-showcase/releases/download/videos-v1/work-2.mp4" controls preload="metadata"></video>
+        <div class="card-body">
+          <h2>视频作品 02</h2>
+          <p>用于展示不同内容类型下的制作适应能力。</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>视频文件托管在 GitHub Releases，网页托管在 GitHub Pages。</footer>
+  </main>
+</body>
+</html>
